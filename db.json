@@ -1,15 +1,27 @@
 {
-  "books": [
+  "urology": [
     {
       "id": 1,
-      "image_url": "https://m.media-amazon.com/images/I/5165He67NEL.jpg",
-      "book_name": "Harry Potter and the Philosopher's Stone",
-      "author": "J. K. Rowling",
-      "genre": "fiction",
-      "edition": "2021",
-      "publisher": "Bloomsbury",
-      "cost": 1299,
-      "borrowed": false
+      "patients": [
+        { "id": 1, "name": "John Doe", "diseases": ["sick", "well"] },
+        { "id": 2, "name": "Jane Smith", "diseases": ["sick", "well"] },
+        { "id": 1, "name": "John Doe", "diseases": ["sick", "well"] }
+      ]
+    },
+    {
+      "id": 2,
+      "patients": [
+        { "id": 3, "name": "Sam Wilson", "diseases": ["sick", "well"] },
+        { "id": 4, "name": "Emily Johnson", "diseases": ["sick", "well"] }
+      ]
+    },
+    {
+      "id": 3,
+      "patients": [
+        { "id": 5, "name": "Sam Wilson", "diseases": ["sick", "well"] },
+        { "id": 6, "name": "Emily Johnson", "diseases": ["sick", "well"] },
+        { "id": 1, "name": "John Doe", "diseases": ["sick", "well"] }
+      ]
     }
   ]
 }
