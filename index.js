@@ -8,7 +8,7 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser); // Add this line to parse request body as JSON
 server.use(router);
 
-// Dynamic route handler for delete and put operations on patients
+// Dynamic route handler for GET, DELETE, PUT operations on patients
 server.use("/urology/:urologyId/patients/:patientId", (req, res) => {
   const { urologyId, patientId } = req.params;
   const updatedPatient = req.body;
@@ -26,7 +26,10 @@ server.use("/urology/:urologyId/patients/:patientId", (req, res) => {
     );
 
     if (patient) {
-      if (req.method === "DELETE") {
+      if (req.method === "GET") {
+        // Return the patient details
+        res.json(patient);
+      } else if (req.method === "DELETE") {
         // Delete the patient from the patients array
         urology.patients = urology.patients.filter(
           (patient) => patient.id !== patientId // Compare id as string
