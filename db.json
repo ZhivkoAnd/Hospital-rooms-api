@@ -1,10 +1,10 @@
 {
   "urology": [
     {
-      "id": 1,
+      "id": "1",
       "patients": [
         {
-          "id": 1,
+          "id": "1",
           "name": "Ivan",
           "notes": "hehe",
           "medicine": "Sirop",
@@ -13,7 +13,7 @@
           "date": "12.05.2023"
         },
         {
-          "id": 2,
+          "id": "2",
           "name": "Petko",
           "notes": "hehe",
           "medicine": "Sirop",
@@ -22,7 +22,7 @@
           "date": "12.05.2023"
         },
         {
-          "id": 3,
+          "id": "3",
           "name": "Koko",
           "notes": "hehe",
           "medicine": "Sirop",
@@ -33,10 +33,10 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "patients": [
         {
-          "id": 4,
+          "id": "1",
           "name": "Gega",
           "notes": "hehe",
           "medicine": "Sirop",
@@ -45,104 +45,8 @@
           "date": "12.05.2023"
         },
         {
-          "id": 5,
+          "id": "2",
           "name": "Stamat",
-          "notes": "hehe",
-          "medicine": "Sirop",
-          "research": "hello",
-          "consultations": "None",
-          "date": "12.05.2023"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "patients": [
-        {
-          "id": 6,
-          "name": "Sam Wilson",
-          "notes": "hehe",
-          "medicine": "Sirop",
-          "research": "hello",
-          "consultations": "None",
-          "date": "12.05.2023"
-        },
-        {
-          "id": 7,
-          "name": "Emily Johnson",
-          "notes": "hehe",
-          "medicine": "Sirop",
-          "research": "hello",
-          "consultations": "None",
-          "date": "12.05.2023"
-        },
-        {
-          "id": 8,
-          "name": "John Doe",
-          "notes": "hehe",
-          "medicine": "Sirop",
-          "research": "hello",
-          "consultations": "None",
-          "date": "12.05.2023"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "patients": [
-        {
-          "id": 6,
-          "name": "Sam Wilson",
-          "notes": "hehe",
-          "medicine": "Sirop",
-          "research": "hello",
-          "consultations": "None",
-          "date": "12.05.2023"
-        },
-        {
-          "id": 7,
-          "name": "Emily Johnson",
-          "notes": "hehe",
-          "medicine": "Sirop",
-          "research": "hello",
-          "consultations": "None",
-          "date": "12.05.2023"
-        },
-        {
-          "id": 8,
-          "name": "John Doe",
-          "notes": "hehe",
-          "medicine": "Sirop",
-          "research": "hello",
-          "consultations": "None",
-          "date": "12.05.2023"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "patients": [
-        {
-          "id": 6,
-          "name": "Sam Wilson",
-          "notes": "hehe",
-          "medicine": "Sirop",
-          "research": "hello",
-          "consultations": "None",
-          "date": "12.05.2023"
-        },
-        {
-          "id": 7,
-          "name": "Emily Johnson",
-          "notes": "hehe",
-          "medicine": "Sirop",
-          "research": "hello",
-          "consultations": "None",
-          "date": "12.05.2023"
-        },
-        {
-          "id": 8,
-          "name": "John Doe",
           "notes": "hehe",
           "medicine": "Sirop",
           "research": "hello",
