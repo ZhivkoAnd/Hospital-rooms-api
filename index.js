@@ -9,19 +9,17 @@ server.use(jsonServer.bodyParser); // Add this line to parse request body as JSO
 server.use(router);
 
 // Dynamic route handler for GET, DELETE, PUT operations on patients
+// Dynamic route handler for GET, DELETE, PUT operations on patients
 server.use("/urology/:urologyId/patients/:patientId", (req, res) => {
   const { urologyId, patientId } = req.params;
 
   // Find the urology entry in the JSON data
-  const urology = router.db
-    .get("urology")
-    .find({ id: parseInt(urologyId) })
-    .value();
+  const urology = router.db.get("urology").find({ id: urologyId }).value();
 
   if (urology) {
     // Find the patient in the patients array
     const patient = urology.patients.find(
-      (patient) => patient.id === parseInt(patientId)
+      (patient) => patient.id === patientId
     );
 
     if (patient) {
@@ -31,7 +29,7 @@ server.use("/urology/:urologyId/patients/:patientId", (req, res) => {
       } else if (req.method === "DELETE") {
         // Delete the patient from the patients array
         urology.patients = urology.patients.filter(
-          (patient) => patient.id !== parseInt(patientId)
+          (patient) => patient.id !== patientId
         );
 
         // Return a success status
