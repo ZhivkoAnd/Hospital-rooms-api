@@ -3,80 +3,312 @@
     {
       "id": 1,
       "patients": [
-        { "id": 1, "name": "Ivan", "diseases": ["sick", "well"] },
-        { "id": 2, "name": "Petko", "diseases": ["sick", "well"] },
-        { "id": 3, "name": "Koko", "diseases": ["sick", "well"] }
+        {
+          "id": 1,
+          "name": "Ivan",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 2,
+          "name": "Petko",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 3,
+          "name": "Koko",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        }
       ]
     },
     {
       "id": 2,
       "patients": [
-        { "id": 4, "name": "Gega", "diseases": ["sick", "well"] },
-        { "id": 5, "name": "Stamat", "diseases": ["sick", "well"] }
+        {
+          "id": 4,
+          "name": "Gega",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 5,
+          "name": "Stamat",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        }
       ]
     },
     {
       "id": 3,
       "patients": [
-        { "id": 6, "name": "Sam Wilson", "diseases": ["sick", "well"] },
-        { "id": 7, "name": "Emily Johnson", "diseases": ["sick", "well"] },
-        { "id": 8, "name": "John Doe", "diseases": ["sick", "well"] }
+        {
+          "id": 6,
+          "name": "Sam Wilson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 7,
+          "name": "Emily Johnson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 8,
+          "name": "John Doe",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        }
       ]
     },
     {
       "id": 4,
       "patients": [
-        { "id": 6, "name": "Sam Wilson", "diseases": ["sick", "well"] },
-        { "id": 7, "name": "Emily Johnson", "diseases": ["sick", "well"] },
-        { "id": 8, "name": "John Doe", "diseases": ["sick", "well"] }
+        {
+          "id": 6,
+          "name": "Sam Wilson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 7,
+          "name": "Emily Johnson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 8,
+          "name": "John Doe",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        }
       ]
     },
     {
       "id": 5,
       "patients": [
-        { "id": 6, "name": "Sam Wilson", "diseases": ["sick", "well"] },
-        { "id": 7, "name": "Emily Johnson", "diseases": ["sick", "well"] },
-        { "id": 8, "name": "John Doe", "diseases": ["sick", "well"] }
+        {
+          "id": 6,
+          "name": "Sam Wilson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 7,
+          "name": "Emily Johnson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 8,
+          "name": "John Doe",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        }
       ]
     },
     {
       "id": 6,
       "patients": [
-        { "id": 6, "name": "Sam Wilson", "diseases": ["sick", "well"] },
-        { "id": 7, "name": "Emily Johnson", "diseases": ["sick", "well"] },
-        { "id": 8, "name": "John Doe", "diseases": ["sick", "well"] }
+        {
+          "id": 6,
+          "name": "Sam Wilson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 7,
+          "name": "Emily Johnson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 8,
+          "name": "John Doe",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        }
       ]
     },
     {
       "id": 7,
       "patients": [
-        { "id": 6, "name": "Sam Wilson", "diseases": ["sick", "well"] },
-        { "id": 7, "name": "Emily Johnson", "diseases": ["sick", "well"] },
-        { "id": 8, "name": "John Doe", "diseases": ["sick", "well"] }
+        {
+          "id": 6,
+          "name": "Sam Wilson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 7,
+          "name": "Emily Johnson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 8,
+          "name": "John Doe",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        }
       ]
     },
     {
       "id": 8,
       "patients": [
-        { "id": 6, "name": "Sam Wilson", "diseases": ["sick", "well"] },
-        { "id": 7, "name": "Emily Johnson", "diseases": ["sick", "well"] },
-        { "id": 8, "name": "John Doe", "diseases": ["sick", "well"] }
+        {
+          "id": 6,
+          "name": "Sam Wilson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 7,
+          "name": "Emily Johnson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 8,
+          "name": "John Doe",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        }
       ]
     },
     {
       "id": 9,
       "patients": [
-        { "id": 6, "name": "Sam Wilson", "diseases": ["sick", "well"] },
-        { "id": 7, "name": "Emily Johnson", "diseases": ["sick", "well"] },
-        { "id": 8, "name": "John Doe", "diseases": ["sick", "well"] }
+        {
+          "id": 6,
+          "name": "Sam Wilson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 7,
+          "name": "Emily Johnson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 8,
+          "name": "John Doe",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        }
       ]
     },
     {
       "id": 10,
       "patients": [
-        { "id": 6, "name": "Sam Wilson", "diseases": ["sick", "well"] },
-        { "id": 7, "name": "Emily Johnson", "diseases": ["sick", "well"] },
-        { "id": 8, "name": "John Doe", "diseases": ["sick", "well"] }
+        {
+          "id": 6,
+          "name": "Sam Wilson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 7,
+          "name": "Emily Johnson",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        },
+        {
+          "id": 8,
+          "name": "John Doe",
+          "notes": "hehe",
+          "medicine": "Sirop",
+          "research": "hello",
+          "consultations": "None",
+          "date": "12.05.2023"
+        }
       ]
     }
   ]
