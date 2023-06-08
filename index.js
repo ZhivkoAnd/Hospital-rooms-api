@@ -1,109 +1,71 @@
 const jsonServer = require("json-server");
 const server = jsonServer.create();
-const router = jsonServer.router({
-  urology: [
-    {
-      id: "1",
-      patients: [
-        {
-          id: "1",
-          name: "Ivan",
-          notes: "hehe",
-          medicine: "Sirop",
-          research: "hello",
-          consultations: "None",
-          date: "12.05.2023",
-        },
-        {
-          id: "2",
-          name: "Petko",
-          notes: "hehe",
-          medicine: "Sirop",
-          research: "hello",
-          consultations: "None",
-          date: "12.05.2023",
-        },
-        {
-          id: "3",
-          name: "Koko",
-          notes: "hehe",
-          medicine: "Sirop",
-          research: "hello",
-          consultations: "None",
-          date: "12.05.2023",
-        },
-      ],
-    },
-    {
-      id: "2",
-      patients: [
-        {
-          id: "1",
-          name: "Gega",
-          notes: "hehe",
-          medicine: "Sirop",
-          research: "hello",
-          consultations: "None",
-          date: "12.05.2023",
-        },
-        {
-          id: "2",
-          name: "Stamat",
-          notes: "hehe",
-          medicine: "Sirop",
-          research: "hello",
-          consultations: "None",
-          date: "12.05.2023",
-        },
-      ],
-    },
-  ],
-});
+const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 const port = process.env.PORT || 3001;
 
 server.use(middlewares);
-server.use(jsonServer.bodyParser); // Add this line to parse request body as JSON
+server.use(jsonServer.bodyParser);
+server.use((req, res, next) => {
+  if (req.method === "POST" && req.originalUrl === "/patients") {
+    // Generate a unique ID for the new patient
+    req.body.id = Date.now().toString();
+  }
+  next();
+});
+
+// Custom route for getting a specific patient
+server.get("/patients/:patientId", (req, res) => {
+  const patientId = req.params.patientId;
+  const patients = router.db
+    .get("urology")
+    .flatMap((urology) => urology.patients)
+    .value();
+  const patient = patients.find((patient) => patient.id === patientId);
+
+  if (patient) {
+    res.json(patient);
+  } else {
+    res.status(404).json({ error: "Patient not found" });
+  }
+});
+
+// Custom route for adding a new patient
+server.post("/patients", (req, res) => {
+  const patient = req.body;
+  router.db
+    .get("urology")
+    .find({ id: patient.urologyId })
+    .get("patients")
+    .push(patient)
+    .write();
+
+  res.status(201).json(patient);
+});
+
+// Custom route for deleting a patient
+server.delete("/patients/:patientId", (req, res) => {
+  const patientId = req.params.patientId;
+  const patients = router.db
+    .get("urology")
+    .flatMap((urology) => urology.patients)
+    .value();
+  const index = patients.findIndex((patient) => patient.id === patientId);
+
+  if (index !== -1) {
+    router.db
+      .get("urology")
+      .flatMap((urology) => urology.patients)
+      .splice(index, 1)
+      .write();
+    res.status(200).json({ message: "Patient deleted" });
+  } else {
+    res.status(404).json({ error: "Patient not found" });
+  }
+});
+
 server.use(router);
 
-// Dynamic route handler for GET, DELETE, PUT operations on patients
-server.use("/urology/:urologyId/patients/:patientId", (req, res) => {
-  const { urologyId, patientId } = req.params;
-
-  // Find the urology entry in the JSON data
-  const urology = router.db.get("urology").find({ id: urologyId }).value();
-
-  if (urology) {
-    // Find the patient in the patients array
-    const patient = urology.patients.find(
-      (patient) => patient.id === patientId
-    );
-
-    if (patient) {
-      if (req.method === "GET") {
-        // Return the patient
-        res.json(patient);
-      } else if (req.method === "DELETE") {
-        // Delete the patient from the patients array
-        urology.patients = urology.patients.filter(
-          (patient) => patient.id !== patientId
-        );
-
-        // Return a success status
-        res.sendStatus(204);
-      } else if (req.method === "PUT") {
-        // Update the patient's data
-        Object.assign(patient, req.body);
-
-        // Return the updated patient
-        res.json(patient);
-      }
-    } else {
-      // Return a not found status if patient not found
-      res.sendStatus(404);
-    }
-  } else {
-    // Return a not found status if urology not found
-    res.sendStatus(404);
-  }
+server.listen(port, () => {
+  console.log(`JSON Server is running on port ${port}`);
 });
