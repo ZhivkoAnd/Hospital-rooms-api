@@ -36,7 +36,7 @@
       "id": "2",
       "patients": [
         {
-          "id": "1",
+          "id": "4",
           "name": "Gega",
           "notes": "hehe",
           "medicine": "Sirop",
@@ -45,7 +45,7 @@
           "date": "12.05.2023"
         },
         {
-          "id": "2",
+          "id": "5",
           "name": "Stamat",
           "notes": "hehe",
           "medicine": "Sirop",
