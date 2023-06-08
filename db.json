@@ -1,6 +1,6 @@
 {
   "urology": {
-    "room": [
+    "rooms": [
       {
         "id": "1",
         "patients": [
