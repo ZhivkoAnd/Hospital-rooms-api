@@ -11,35 +11,34 @@ server.use(router);
 // Dynamic route handler for GET, DELETE, PUT operations on patients
 server.use("/urology/:urologyId/patients/:patientId", (req, res) => {
   const { urologyId, patientId } = req.params;
-  const updatedPatient = req.body;
 
   // Find the urology entry in the JSON data
   const urology = router.db
     .get("urology")
-    .find({ id: urologyId }) // Compare id as string
+    .find({ id: parseInt(urologyId) })
     .value();
 
   if (urology) {
     // Find the patient in the patients array
     const patient = urology.patients.find(
-      (patient) => patient.id === patientId // Compare id as string
+      (patient) => patient.id === parseInt(patientId)
     );
 
     if (patient) {
       if (req.method === "GET") {
-        // Return the patient details
+        // Return the patient
         res.json(patient);
       } else if (req.method === "DELETE") {
         // Delete the patient from the patients array
         urology.patients = urology.patients.filter(
-          (patient) => patient.id !== patientId // Compare id as string
+          (patient) => patient.id !== parseInt(patientId)
         );
 
         // Return a success status
         res.sendStatus(204);
       } else if (req.method === "PUT") {
         // Update the patient's data
-        Object.assign(patient, updatedPatient);
+        Object.assign(patient, req.body);
 
         // Return the updated patient
         res.json(patient);
