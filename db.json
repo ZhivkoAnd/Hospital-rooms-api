@@ -1,59 +1,70 @@
 {
-  "urology": [
-    {
-      "id": "1",
-      "patients": [
-        {
-          "id": "1",
-          "name": "Ivan",
-          "notes": "hehe",
-          "medicine": "Sirop",
-          "research": "hello",
-          "consultations": "None",
-          "date": "12.05.2023"
-        },
-        {
-          "id": "2",
-          "name": "Petko",
-          "notes": "hehe",
-          "medicine": "Sirop",
-          "research": "hello",
-          "consultations": "None",
-          "date": "12.05.2023"
-        },
-        {
-          "id": "3",
-          "name": "Koko",
-          "notes": "hehe",
-          "medicine": "Sirop",
-          "research": "hello",
-          "consultations": "None",
-          "date": "12.05.2023"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "patients": [
-        {
-          "id": "4",
-          "name": "Gega",
-          "notes": "hehe",
-          "medicine": "Sirop",
-          "research": "hello",
-          "consultations": "None",
-          "date": "12.05.2023"
-        },
-        {
-          "id": "5",
-          "name": "Stamat",
-          "notes": "hehe",
-          "medicine": "Sirop",
-          "research": "hello",
-          "consultations": "None",
-          "date": "12.05.2023"
-        }
-      ]
-    }
-  ]
+  "urology": {
+    "room": [
+      {
+        "id": "1",
+        "patients": [
+          {
+            "id": "1",
+            "name": "Ivan",
+            "notes": "hehe",
+            "medicine": "Sirop",
+            "research": "hello",
+            "consultations": "None",
+            "date": "12.05.2023"
+          },
+          {
+            "id": "2",
+            "name": "Petko",
+            "notes": "hehe",
+            "medicine": "Sirop",
+            "research": "hello",
+            "consultations": "None",
+            "date": "12.05.2023"
+          },
+          {
+            "id": "3",
+            "name": "Koko",
+            "notes": "hehe",
+            "medicine": "Sirop",
+            "research": "hello",
+            "consultations": "None",
+            "date": "12.05.2023"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "patients": [
+          {
+            "id": "1",
+            "name": "Ivan",
+            "notes": "hehe",
+            "medicine": "Sirop",
+            "research": "hello",
+            "consultations": "None",
+            "date": "12.05.2023"
+          },
+          {
+            "id": "2",
+            "name": "Petko",
+            "notes": "hehe",
+            "medicine": "Sirop",
+            "research": "hello",
+            "consultations": "None",
+            "date": "12.05.2023"
+          },
+          {
+            "id": "3",
+            "name": "Koko",
+            "notes": "hehe",
+            "medicine": "Sirop",
+            "research": "hello",
+            "consultations": "None",
+            "date": "12.05.2023"
+          }
+        ]
+      }
+    ]
+  }
 }
