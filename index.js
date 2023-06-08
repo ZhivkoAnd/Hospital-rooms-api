@@ -5,6 +5,7 @@ const middlewares = jsonServer.defaults();
 const port = process.env.PORT || 3001;
 
 server.use(middlewares);
+server.use(jsonServer.bodyParser); // Add this line to parse request body as JSON
 server.use(router);
 
 // Custom route handler for the delete endpoint
