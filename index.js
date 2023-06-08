@@ -15,13 +15,13 @@ server.use("/urology/:urologyId/patients/:patientId", (req, res) => {
   // Find the urology entry in the JSON data
   const urology = router.db
     .get("urology")
-    .find({ id: parseInt(urologyId) })
+    .find({ id: urologyId }) // Remove parseInt function
     .value();
 
   if (urology) {
     // Find the patient in the patients array
     const patient = urology.patients.find(
-      (patient) => patient.id === parseInt(patientId)
+      (patient) => patient.id === patientId // Remove parseInt function
     );
 
     if (patient) {
