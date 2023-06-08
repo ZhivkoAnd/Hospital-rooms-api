@@ -1,6 +1,64 @@
 const jsonServer = require("json-server");
 const server = jsonServer.create();
-const router = jsonServer.router("db.json");
+const router = jsonServer.router({
+  urology: [
+    {
+      id: "1",
+      patients: [
+        {
+          id: "1",
+          name: "Ivan",
+          notes: "hehe",
+          medicine: "Sirop",
+          research: "hello",
+          consultations: "None",
+          date: "12.05.2023",
+        },
+        {
+          id: "2",
+          name: "Petko",
+          notes: "hehe",
+          medicine: "Sirop",
+          research: "hello",
+          consultations: "None",
+          date: "12.05.2023",
+        },
+        {
+          id: "3",
+          name: "Koko",
+          notes: "hehe",
+          medicine: "Sirop",
+          research: "hello",
+          consultations: "None",
+          date: "12.05.2023",
+        },
+      ],
+    },
+    {
+      id: "2",
+      patients: [
+        {
+          id: "1",
+          name: "Gega",
+          notes: "hehe",
+          medicine: "Sirop",
+          research: "hello",
+          consultations: "None",
+          date: "12.05.2023",
+        },
+        {
+          id: "2",
+          name: "Stamat",
+          notes: "hehe",
+          medicine: "Sirop",
+          research: "hello",
+          consultations: "None",
+          date: "12.05.2023",
+        },
+      ],
+    },
+  ],
+});
 const middlewares = jsonServer.defaults();
 const port = process.env.PORT || 3001;
 
@@ -8,7 +66,6 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser); // Add this line to parse request body as JSON
 server.use(router);
 
-// Dynamic route handler for GET, DELETE, PUT operations on patients
 // Dynamic route handler for GET, DELETE, PUT operations on patients
 server.use("/urology/:urologyId/patients/:patientId", (req, res) => {
   const { urologyId, patientId } = req.params;
@@ -49,8 +106,4 @@ server.use("/urology/:urologyId/patients/:patientId", (req, res) => {
     // Return a not found status if urology not found
     res.sendStatus(404);
   }
-});
-
-server.listen(port, () => {
-  console.log(`JSON Server is running on port ${port}`);
 });
