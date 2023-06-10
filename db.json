@@ -3,28 +3,11 @@
     "rooms": [
       {
         "id": "1",
+        "beds": 1,
         "patients": [
           {
             "id": "1",
             "name": "Ivan",
-            "notes": "hehe",
-            "medicine": "Sirop",
-            "research": "hello",
-            "consultations": "None",
-            "date": "12.05.2023"
-          },
-          {
-            "id": "2",
-            "name": "Petko",
-            "notes": "hehe",
-            "medicine": "Sirop",
-            "research": "hello",
-            "consultations": "None",
-            "date": "12.05.2023"
-          },
-          {
-            "id": "3",
-            "name": "Koko",
             "notes": "hehe",
             "medicine": "Sirop",
             "research": "hello",
@@ -35,6 +18,31 @@
       },
       {
         "id": "2",
+        "beds": 2,
+        "patients": [
+          {
+            "id": "2",
+            "name": "Ivan",
+            "notes": "hehe",
+            "medicine": "Sirop",
+            "research": "hello",
+            "consultations": "None",
+            "date": "12.05.2023"
+          },
+          {
+            "id": "3",
+            "name": "Petko",
+            "notes": "hehe",
+            "medicine": "Sirop",
+            "research": "hello",
+            "consultations": "None",
+            "date": "12.05.2023"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "beds": 3,
         "patients": [
           {
             "id": "4",
